@@ -225,7 +225,6 @@ async def validate(update: Update, context):
 def main():
     import os
     TOKEN = os.getenv("TELEGRAM_TOKEN")
-
     application = Application.builder().token(TOKEN).build()
 
     # Ajouter les gestionnaires de commandes et de messages
