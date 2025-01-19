@@ -223,7 +223,9 @@ async def validate(update: Update, context):
 
 # Configurer le bot
 def main():
-    TOKEN = "7779165757:AAEeAQPpMrMhz4kqID813t3SbpySOyp9Ezg"  # Remplace par le token obtenu de BotFather
+    import os
+    TOKEN = os.getenv("TELEGRAM_TOKEN")
+
     application = Application.builder().token(TOKEN).build()
 
     # Ajouter les gestionnaires de commandes et de messages
